@@ -34,7 +34,7 @@ const SecondPageTwo: React.FC = () => {
     return initialState;
   });
 
-  useEffect(() => {
+  
     const updateMainDepartmentChecked = (department: string) => {
       setChecked((prevChecked) => {
         const allSubDepartmentsChecked = departmentList
@@ -55,8 +55,7 @@ const SecondPageTwo: React.FC = () => {
 
     departmentList.forEach((deptItem) => {
       updateMainDepartmentChecked(deptItem.department);
-    });
-  }, [checked]);
+    })
 
   const handleCheckboxChange = (department: string, sub_department?: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
     if (sub_department) {
